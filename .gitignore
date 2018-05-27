@@ -1,0 +1,12 @@
+/.vs
+/*.user
+/Inifinal.CarPc/bin
+/Inifinal.CarPc/obj
+/Infinal.CarPc.Test/bin
+/Infinal.CarPc.Test/obj
+/Infinal.CarPc.Shell/bin
+/Infinal.CarPc.Shell/obj
+/Infinal.CarPc.FontAwesome5.WPF/bin
+/Infinal.CarPc.FontAwesome5.WPF/obj
+/packages
+/Infinal.CarPc.FontAwesome5.WPF/Infinal.CarPc.FontAwesome5.WPF.csproj.user

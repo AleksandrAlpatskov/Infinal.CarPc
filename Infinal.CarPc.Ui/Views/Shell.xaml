@@ -1,0 +1,45 @@
+﻿<Window x:Class="Infinal.CarPc.Ui.Views.Shell"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:prism="http://prismlibrary.com/"
+        xmlns:wpf="clr-namespace:Infinal.CarPc.FontAwesome5.WPF;assembly=Infinal.CarPc.FontAwesome5.WPF"
+        xmlns:viewModels="clr-namespace:Infinal.CarPc.Ui.ViewModels"
+        prism:ViewModelLocator.AutoWireViewModel="True"
+        mc:Ignorable="d"
+        Title="Shell" 
+        Height="450" 
+        Width="800" 
+        ResizeMode="NoResize" 
+        WindowStartupLocation="CenterScreen" 
+        ShowInTaskbar="True" 
+        Cursor="None" 
+        WindowStyle="None"
+        d:DataContext="{d:DesignInstance viewModels:ShellViewModel}">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="6*"/>
+            <RowDefinition Height="84*"/>
+            <RowDefinition Height="10*"/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0" Name="StatusBarGrid">
+            <wpf:SvgAwesome Grid.Row="0" Icon="Brands_BluetoothB" Margin="739,1,45,1" Foreground="Gray" />
+            <Grid Width="30" Margin="760,1,10,1" >
+                <Grid Margin="0,0,0,0">
+                    <wpf:SvgAwesome Icon="Solid_Signal" Foreground="Black" Opacity="0.2" Height="25" VerticalAlignment="Top" HorizontalAlignment="Left" Width="30" MinWidth="30" />
+                </Grid>
+                <Grid Margin="0,0,24,0">
+                    <wpf:SvgAwesome Icon="Solid_Signal" Foreground="Black" Height="25" VerticalAlignment="Top" HorizontalAlignment="Left" Width="30" MinWidth="30" />
+                </Grid>
+            </Grid>
+        </Grid>
+        <Grid Grid.Row="1" >
+            <ContentControl Name="ContentRegion" prism:RegionManager.RegionName="ContentRegion" />
+        </Grid>
+        <Grid Grid.Row="1" >
+            <ContentControl Name="BarRegion" prism:RegionManager.RegionName="BarRegion" />
+        </Grid>
+
+    </Grid>
+</Window>
